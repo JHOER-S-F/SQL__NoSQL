@@ -1,0 +1,21 @@
+
+use TIENDA  ;
+
+o
+db.productos.insertOne({ "nombre": "teclado", "precio": 200, "stock": 20 });
+
+
+db.productos.insertMany([
+    { "nombre": "mouse", "precio": 300, "stock": 10 }, 
+    { "nombre": "chip", "precio": 100, "stock": 30 }
+]);
+
+
+db.productos.find();
+
+db.productos.deleteOne({ nombre: "teclado" }); 
+
+
+db.productos.updateOne({ nombre: "mouse" }, { $set: { precio: 400 } }); 
+
+
